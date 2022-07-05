@@ -15,7 +15,7 @@ function Home() {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.PROD ? '/react_router_multi-tab' :  undefined}>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
